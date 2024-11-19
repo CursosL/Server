@@ -13,11 +13,11 @@ public class CorseConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("http://localhost:4200", "https://cursos-navy.vercel.app")
                         .allowedMethods("*");
 
                 registry.addMapping("/login")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("http://localhost:4200", "https://cursos-navy.vercel.app")
                         .allowedMethods("*")
                         .exposedHeaders("*");
             }
